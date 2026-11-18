@@ -1,0 +1,14 @@
+{
+  "name": "bausteine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kleine, eigenständige Web-Bausteine ohne Framework: PWA offline, Formular mit Prüfung.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test formular/formular.test.mjs"
+  }
+}

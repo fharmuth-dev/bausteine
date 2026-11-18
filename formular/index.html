@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontaktformular · bausteine</title>
+  <meta name="description" content="Beispiel: Kontaktformular mit Prüfung, verständlichen Fehlermeldungen und Spam-Schutz ohne Bibliothek.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Anfrage</h1>
+    <form id="anfrage" action="#" method="post">
+      <div class="feld">
+        <label for="name">Name</label>
+        <input id="name" name="name" autocomplete="name" required aria-describedby="fehler-name">
+        <p class="fehler" id="fehler-name" aria-live="polite"></p>
+      </div>
+      <div class="feld">
+        <label for="kontakt">E-Mail oder Telefon</label>
+        <input id="kontakt" name="kontakt" autocomplete="email" inputmode="email" required aria-describedby="fehler-kontakt">
+        <p class="fehler" id="fehler-kontakt" aria-live="polite"></p>
+      </div>
+      <div class="feld">
+        <label for="nachricht">Nachricht (optional)</label>
+        <textarea id="nachricht" name="nachricht" rows="5" aria-describedby="fehler-nachricht"></textarea>
+        <p class="fehler" id="fehler-nachricht" aria-live="polite"></p>
+      </div>
+      <!-- Für Menschen unsichtbar und nicht erreichbar. Bots füllen es aus. -->
+      <div class="falle" aria-hidden="true">
+        <label for="website">Bitte leer lassen</label>
+        <input id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <div class="feld">
+        <label class="haken"><input type="checkbox" name="einwilligung" aria-describedby="fehler-einwilligung"> Ich bin einverstanden, dass meine Angaben gespeichert werden, um die Anfrage zu beantworten.</label>
+        <p class="fehler" id="fehler-einwilligung" aria-live="polite"></p>
+      </div>
+      <button type="submit">Anfrage senden</button>
+      <p id="meldung" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <script type="module" src="formular.js"></script>
+</body>
+</html>

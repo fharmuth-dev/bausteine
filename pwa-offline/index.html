@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PWA offline · bausteine</title>
+  <meta name="description" content="Beispiel: eine Seite, die sich aufs Handy legen lässt und ohne Netz weiterläuft.">
+  <meta name="theme-color" content="#111111">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Läuft auch ohne Netz</h1>
+    <p>Laden Sie die Seite einmal, schalten Sie dann den Flugmodus ein und laden Sie neu. Die Seite bleibt da.</p>
+    <p class="status" id="status" role="status" aria-live="polite">Prüfe Verbindung …</p>
+    <p><a href="seite-2.html">Zweite Seite</a> (liegt ebenfalls im Speicher)</p>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
